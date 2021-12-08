@@ -1,0 +1,19 @@
+options:
+	prefix: &c&lITEMSUCHT &8»
+command /rand:
+	aliases: plotrand
+	permission: rand.use
+	permission message: &c&lITEMSUCHT &8» &7Du darfst keine Ränder benutzen!
+	trigger:
+		wait 3 ticks
+		open chest with 1 rows named "&c&lITEMSUCHT &8» &aWähle einen Rand!" to player
+		wait 3 ticks
+		format slot 0 of player with grass named "&b&lGras" to close then run [execute player command "/p set wall grass"]
+		format slot 1 of player with Quartz Block named "&b&lQuarz" to close then run [execute player command "/p set wall 155"]
+		format slot 2 of player with Chiseled Quartz Block named "&b&lGemeißelter Quarzblock" to close then run [execute player command "/p set wall 155:1"]
+		format slot 3 of player with Stone named "&b&lStein" to close then run [execute player command "/p set wall 1"]
+		format slot 4 of player with Sandstone named "&b&lSandstein" to close then run [execute player command "/p set wall 24"]
+		format slot 5 of player with Gold Block named "&b&lGold" to close then run [execute player command "/p set wall 41"]
+		format slot 6 of player with Obsidian named "&b&lObsidian" to close then run [execute player command "/p set wall 49"]
+		format slot 7 of player with Slime block named "&b&lSchleim" to close then run [execute player command "/p set wall 165"]
+		format slot 8 of player with Packed ice named "&b&lPackeis" to close then run [execute player command "/p set wall 174"]
